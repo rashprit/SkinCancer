@@ -1,0 +1,155 @@
+/* SkinCare.css - Enhanced */
+:root {
+  --primary-color: #6366f1;
+  --primary-dark: #4f46e5;
+  --primary-light: #818cf8;
+  --secondary-color: #10b981;
+  --background-dark: #0f172a;
+  --background-card: #1e293b;
+  --background-card-light: #334155;
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --border-color: #374151;
+  --success-color: #10b981;
+  --error-color: #ef4444;
+  --warning-color: #f59e0b;
+  --border-radius: 16px;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  --shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.4);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skin-care {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 3rem;
+  background: var(--background-card);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+  color: var(--text-primary);
+}
+
+.skin-care h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.skin-care h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  color: var(--text-primary);
+  position: relative;
+}
+
+.skin-care h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  margin: 0.5rem auto;
+  border-radius: 2px;
+}
+
+.skin-care h3 {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.skin-care ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.skin-care li {
+  background: var(--background-card-light);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.skin-care li::before {
+  content: '✨';
+  margin-right: 0.75rem;
+}
+
+.skin-care li:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--primary-light);
+}
+
+.skin-care a {
+  color: var(--primary-light);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.skin-care a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.tips-grid, .products-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.tip-card, .product-card {
+  background: var(--background-card-light);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.tip-card:hover, .product-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--primary-light);
+}
+
+.product-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.product-icon {
+  font-size: 1.5rem;
+  background: rgba(99, 102, 241, 0.1);
+  padding: 0.75rem;
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .skin-care {
+    padding: 2rem 1.5rem;
+    margin: 1rem;
+  }
+  
+  .skin-care h1 {
+    font-size: 2rem;
+  }
+  
+  .tips-grid, .products-grid {
+    grid-template-columns: 1fr;
+  }
+}

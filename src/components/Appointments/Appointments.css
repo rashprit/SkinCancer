@@ -1,0 +1,217 @@
+/* Appointments.css - Enhanced Version */
+.appointments {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.appointments h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.appointments h2 {
+    text-align: center;
+    color: #34495e;
+    margin-bottom: 1.8rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+    position: relative;
+}
+
+.appointments h2:after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, #3498db, #2ecc71);
+    margin: 0.5rem auto;
+    border-radius: 2px;
+}
+
+.appointment-form-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2.5rem;
+}
+
+.appointments form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    gap: 1.2rem;
+    align-items: end;
+}
+
+.appointments .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.appointments label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #2c3e50;
+    font-size: 0.9rem;
+}
+
+.appointments input {
+    padding: 0.9rem 1rem;
+    border: 1.5px solid #e1e8ed;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #fafbfc;
+}
+
+.appointments input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    background-color: white;
+}
+
+.appointments input:hover {
+    border-color: #bdc3c7;
+}
+
+.appointments button {
+    padding: 0.9rem 1.8rem;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 4px 6px rgba(52, 152, 219, 0.2);
+    height: fit-content;
+}
+
+.appointments button:hover {
+    background: linear-gradient(135deg, #2980b9, #2471a3);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(52, 152, 219, 0.3);
+}
+
+.appointments button:active {
+    transform: translateY(0);
+}
+
+.appointments-list-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.appointments ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.appointments li {
+    background: linear-gradient(to right, #ffffff, #f8f9fa);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #3498db;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.appointments li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.appointment-info {
+    flex: 1;
+}
+
+.appointment-info strong {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.appointment-actions {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.appointment-actions button {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    background: #f8f9fa;
+    color: #6c757d;
+    border: 1px solid #dee2e6;
+    box-shadow: none;
+}
+
+.appointment-actions button:hover {
+    transform: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.appointment-actions button.edit-btn:hover {
+    background: #e3f2fd;
+    color: #1976d2;
+    border-color: #1976d2;
+}
+
+.appointment-actions button.delete-btn:hover {
+    background: #ffebee;
+    color: #d32f2f;
+    border-color: #d32f2f;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 2rem;
+    color: #7f8c8d;
+}
+
+.empty-state p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .appointments {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    
+    .appointments form {
+        grid-template-columns: 1fr;
+    }
+    
+    .appointment-form-container, .appointments-list-container {
+        padding: 1.5rem;
+    }
+    
+    .appointments li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .appointment-actions {
+        align-self: flex-end;
+    }
+}

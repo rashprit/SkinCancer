@@ -1,0 +1,358 @@
+/* Resources.css - Professional Medical Theme */
+.resources-content {
+  padding: 0;
+}
+
+.resources-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 0 1rem;
+}
+
+.resources-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.resources-header p {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 968px) {
+  .main-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.resource-section {
+  background: var(--primary-white);
+  padding: 2rem;
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-light);
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.resource-section:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+  border-color: var(--medical-blue);
+}
+
+.resource-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.resource-section h2::before {
+  font-size: 1.5rem;
+}
+
+.educational-resources h2::before {
+  content: '📚';
+}
+
+.emergency-contacts h2::before {
+  content: '🚨';
+}
+
+.resource-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.resource-item {
+  margin-bottom: 0.75rem;
+}
+
+.resource-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: var(--bg-gray);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius);
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: var(--transition);
+  font-weight: 500;
+}
+
+.resource-link:hover {
+  background: var(--primary-white);
+  border-color: var(--medical-blue);
+  transform: translateX(4px);
+  box-shadow: var(--shadow-sm);
+}
+
+.emergency-alert {
+  background: linear-gradient(135deg, var(--error-color), #b91c1c);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 2rem;
+  text-align: center;
+  border: 1px solid rgba(220, 38, 38, 0.3);
+  color: var(--primary-white);
+}
+
+.emergency-alert h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--primary-white);
+}
+
+.emergency-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary-white);
+  margin: 1rem 0;
+  font-family: 'Inter', monospace;
+}
+
+.emergency-alert p {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Find Doctors Button - Professional Style */
+.find-doctors-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: var(--medical-blue);
+  color: var(--primary-white);
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  transition: var(--transition);
+  border: 1px solid var(--medical-blue);
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.find-doctors-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  color: var(--primary-white);
+}
+
+/* Ensure the button in emergency contacts section is properly styled */
+.emergency-contacts .find-doctors-button {
+  margin-top: 1.5rem;
+}
+
+/* Additional Resources Section */
+.additional-resources {
+  background: var(--primary-white);
+  padding: 2.5rem;
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-light);
+  margin-top: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.additional-resources h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.resource-card {
+  background: var(--primary-white);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-light);
+  transition: var(--transition);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.resource-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+  border-color: var(--medical-blue);
+}
+
+.resource-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.resource-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.resource-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.resource-card .tab {
+  background: transparent;
+  border: 1px solid var(--border-gray);
+  color: var(--text-secondary);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.resource-card .tab:hover {
+  background: var(--bg-gray);
+  border-color: var(--medical-blue);
+  color: var(--medical-blue);
+}
+
+/* Emergency Contacts Additional Styling */
+.emergency-contacts-content {
+  text-align: center;
+}
+
+.emergency-contacts-content h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.emergency-contacts-content p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+/* Medical Disclaimer Style */
+.medical-info {
+  background: var(--bg-gray);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--medical-blue);
+  margin-top: 2rem;
+}
+
+.medical-info h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.medical-info p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .resources-content {
+    padding: 0;
+  }
+  
+  .resources-header h1 {
+    font-size: 1.75rem;
+  }
+  
+  .resources-header p {
+    font-size: 1.05rem;
+  }
+  
+  .resource-section {
+    padding: 1.5rem;
+  }
+  
+  .additional-resources {
+    padding: 2rem 1.5rem;
+  }
+  
+  .resource-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .resource-card {
+    padding: 1.5rem;
+  }
+  
+  .emergency-alert {
+    padding: 1.5rem;
+  }
+  
+  .emergency-number {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .resources-header {
+    margin-bottom: 2rem;
+  }
+  
+  .resources-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .resource-section h2 {
+    font-size: 1.3rem;
+  }
+  
+  .resource-link {
+    padding: 0.875rem;
+    font-size: 0.95rem;
+  }
+  
+  .find-doctors-button {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
